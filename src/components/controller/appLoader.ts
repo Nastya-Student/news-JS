@@ -1,4 +1,4 @@
-import Loader from './loader';
+import { Loader } from './loader.js';
 
 const url = process.env.API_URL ?? '';
 const key = process.env.API_KEY ?? '';

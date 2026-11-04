@@ -1,5 +1,5 @@
 import './sources.css';
-import SourcesItem from '../../responses/sourcesItem';
+import type { SourcesItem } from '../../responses/sourcesItem.js';
 
 class Sources {
     public draw(data: SourcesItem[]) {

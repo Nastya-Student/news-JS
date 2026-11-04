@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import Language from '../enums/language';
-import Options from './options';
+import Language from '../enums/language.js';
+import type { Options } from './options.js';
 
-interface EverythingOptions extends Options {
+export interface EverythingOptions extends Options {
     q: string;
     searchIn: SearchIn;
     sources: string;
@@ -31,5 +31,3 @@ const SEARCH_IN = {
 } as const;
 
 type SearchIn = (typeof SEARCH_IN)[keyof typeof SEARCH_IN];
-
-export default EverythingOptions;

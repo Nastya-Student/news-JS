@@ -1,5 +1,3 @@
-interface CommonResponse {
+export interface CommonResponse {
     status: 'ok' | 'error';
 }
-
-export default CommonResponse;

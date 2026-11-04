@@ -1,7 +1,7 @@
-import News from './news/news';
-import Sources from './sources/sources';
-import ArticlesResponse from '../responses/articlesResponse';
-import DataSources from '../responses/sourcesResponse';
+import News from './news/news.js';
+import Sources from './sources/sources.js';
+import type { ArticlesResponse } from '../responses/articlesResponse.js';
+import type { DataSources } from '../responses/sourcesResponse.js';
 
 export class AppView {
     private _news: News;

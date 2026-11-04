@@ -1,10 +1,10 @@
-import ArticlesResponse from '../responses/articlesResponse';
-import DataSources from '../responses/sourcesResponse';
-import AppLoader from './appLoader';
-import Endpoint from './enums/endpoints';
-import EverythingOptions from './options/everythingOptions';
+import type { ArticlesResponse } from '../responses/articlesResponse.js';
+import type { DataSources } from '../responses/sourcesResponse.js';
+import AppLoader from './appLoader.js';
+import Endpoint from './enums/endpoints.js';
+import type { EverythingOptions } from './options/everythingOptions.js';
 
-class AppController extends AppLoader {
+export class AppController extends AppLoader {
     public getSources(callback: (data: DataSources) => void) {
         super.getResp(
             {
@@ -37,5 +37,3 @@ class AppController extends AppLoader {
         }
     }
 }
-
-export default AppController;

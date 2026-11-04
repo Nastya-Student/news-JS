@@ -1,4 +1,4 @@
-import ArticleItem from '../../responses/articleItem';
+import type { ArticleItem } from '../../responses/articleItem.js';
 import './news.css';
 
 const NEWS_AMOUNT = 10;

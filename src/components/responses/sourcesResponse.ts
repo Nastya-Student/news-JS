@@ -1,8 +1,6 @@
-import CommonResponse from './commonResponse';
-import SourcesItem from './sourcesItem';
+import type { CommonResponse } from './commonResponse.js';
+import type { SourcesItem } from './sourcesItem.js';
 
-interface DataSources extends CommonResponse {
+export interface DataSources extends CommonResponse {
     sources: SourcesItem[];
 }
-
-export default DataSources;

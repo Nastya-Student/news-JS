@@ -1,7 +1,7 @@
-import Options from './options';
-import { Category } from '../consts';
+import type { Options } from './options.js';
+import type { Category } from '../consts.js';
 
-interface TopHeadlinesOptions extends Options {
+export interface TopHeadlinesOptions extends Options {
     country: 'us';
     category: Category;
     sources: string;
@@ -9,5 +9,3 @@ interface TopHeadlinesOptions extends Options {
     pageSize: number;
     page: number;
 }
-
-export default TopHeadlinesOptions;

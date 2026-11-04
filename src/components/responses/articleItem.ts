@@ -1,4 +1,4 @@
-interface ArticleItem {
+export interface ArticleItem {
     source: NewsSource;
     author: string | null;
     title: string;
@@ -13,5 +13,3 @@ interface NewsSource {
     id: string | null;
     name: string;
 }
-
-export default ArticleItem;

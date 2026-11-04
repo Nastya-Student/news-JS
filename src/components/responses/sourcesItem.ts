@@ -1,4 +1,4 @@
-interface SourcesItem {
+export interface SourcesItem {
     id: string;
     name: string;
     description: string;
@@ -7,5 +7,3 @@ interface SourcesItem {
     language: string;
     country: string;
 }
-
-export default SourcesItem;

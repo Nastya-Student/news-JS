@@ -1,8 +1,8 @@
-import CommonResponse from '../responses/commonResponse';
-import Endpoint from './enums/endpoints';
-import Options from './options/options';
+import type { CommonResponse } from '../responses/commonResponse.js';
+import Endpoint from './enums/endpoints.js';
+import type { Options } from './options/options.js';
 
-class Loader {
+export class Loader {
     private _baseLink: string;
     private _options: Options;
 
@@ -61,8 +61,6 @@ class Loader {
             .catch((err) => console.error(err));
     }
 }
-
-export default Loader;
 
 interface EndpointClass<T extends Options> {
     endpoint: Endpoint;

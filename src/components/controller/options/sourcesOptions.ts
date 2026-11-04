@@ -1,12 +1,10 @@
-import Country from '../enums/country';
-import Language from '../enums/language';
-import Options from './options';
-import { Category } from '../consts';
+import Country from '../enums/country.js';
+import Language from '../enums/language.js';
+import type { Options } from './options.js';
+import type { Category } from '../consts.js';
 
-interface SourcesOptions extends Options {
+export interface SourcesOptions extends Options {
     category: Category;
     language: Language;
     country: Country;
 }
-
-export default SourcesOptions;

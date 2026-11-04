@@ -1,9 +1,7 @@
-import ArticleItem from './articleItem';
-import CommonResponse from './commonResponse';
+import type { ArticleItem } from './articleItem.js';
+import type { CommonResponse } from './commonResponse.js';
 
-interface ArticlesResponse extends CommonResponse {
+export interface ArticlesResponse extends CommonResponse {
     totalResults: number;
     articles: ArticleItem[];
 }
-
-export default ArticlesResponse;

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import Language from '../enums/language.js';
+import type { Language } from '../consts/language.js';
 import type { Options } from './options.js';
 
 export interface EverythingOptions extends Options {

@@ -1,14 +1,14 @@
 import type { ArticlesResponse } from '../responses/articlesResponse.js';
 import type { DataSources } from '../responses/sourcesResponse.js';
 import AppLoader from './appLoader.js';
-import Endpoint from './enums/endpoints.js';
+import { ENDPOINT } from './consts/endpoints.js';
 import type { EverythingOptions } from './options/everythingOptions.js';
 
 export class AppController extends AppLoader {
     public getSources(callback: (data: DataSources) => void) {
         super.getResp(
             {
-                endpoint: Endpoint.Sources,
+                endpoint: ENDPOINT.Sources,
             },
             callback
         );
@@ -25,7 +25,7 @@ export class AppController extends AppLoader {
                     newsContainer.setAttribute('data-source', sourceId ?? '');
                     super.getResp<EverythingOptions, ArticlesResponse>(
                         {
-                            endpoint: Endpoint.Everything,
+                            endpoint: ENDPOINT.Everything,
                             options: { ...super.options, sources: sourceId?.toString() ?? '' },
                         },
                         callback

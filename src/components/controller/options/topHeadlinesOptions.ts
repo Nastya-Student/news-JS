@@ -1,5 +1,5 @@
 import type { Options } from './options.js';
-import type { Category } from '../consts.js';
+import type { Category } from '../consts/category.js';
 
 export interface TopHeadlinesOptions extends Options {
     country: 'us';

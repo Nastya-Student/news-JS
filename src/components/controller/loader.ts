@@ -1,5 +1,5 @@
 import type { CommonResponse } from '../responses/commonResponse.js';
-import Endpoint from './enums/endpoints.js';
+import type { Endpoint } from './consts/endpoints.js';
 import type { Options } from './options/options.js';
 
 export class Loader {

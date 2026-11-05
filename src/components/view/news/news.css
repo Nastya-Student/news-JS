@@ -1,8 +1,7 @@
 .news__item {
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
-    margin-bottom: 1.6%;
+    margin: 1rem auto 1.6%;
     background: #fff;
     color: #333;
     line-height: 1.4;
@@ -162,5 +161,22 @@
 
     .news__item.alt .news__meta-details {
         padding-left: 25px;
+    }
+}
+
+.upButton{
+    transform: rotate(270deg);
+    transform-origin: center;
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    border: #30c5ff 1px solid;
+    display: inline;
+    padding: 10px;
+    z-index: 3;
+    background: #17181c;
+    opacity: 50%;
+    &:hover{
+        cursor: pointer;
     }
 }

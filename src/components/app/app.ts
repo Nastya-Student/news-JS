@@ -1,0 +1,28 @@
+import { AppController } from '../controller/controller.js';
+import { AppView } from '../view/appView.js';
+
+class App {
+    private _controller: AppController;
+    private _view: AppView;
+
+    constructor() {
+        this._controller = new AppController();
+        this._view = new AppView();
+    }
+
+    public start() {
+        const sources = document.querySelector<HTMLDivElement>('.sources');
+        if (!sources) {
+            return;
+        }
+        this._controller.getSources((data) => this._view.drawSources(data));
+        sources.addEventListener('click', (e) => this.handleSourcesClick(e));
+    }
+
+    private handleSourcesClick(e: MouseEvent) {
+        this._controller.getNews(e, (data) => this._view.drawNews(data));
+        document.getElementById('news')?.scrollIntoView();
+    }
+}
+
+export default App;

@@ -1,16 +1,40 @@
+html{
+    @media screen and (max-width: 481px){
+        font-size: 12px;
+    }
+}
+
 body {
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
-header {
+header, 
+main, 
+footer {
     padding: 10px 30px;
+}
+
+main{
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    overflow-y: scroll;
 }
 
 header h1 {
     font-size: 40px;
     font-weight: 800;
+    @media screen and (max-width: 481px){
+        font-size: 30px;
+    }
 }
 
 footer {
@@ -19,17 +43,21 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
 footer .copyright {
     font-size: 14px;
     color: #333;
     text-align: center;
 }
+
 footer .copyright a {
     color: #444;
 }
+
 footer .copyright a:hover {
     color: #555;
 }
+
 footer .copyright:before {
     content: '©';
 }
